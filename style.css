@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Martian+Mono:wght@100..800&family=Protest+Riot&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -27,6 +29,7 @@ body{
     /*background-color: rgb(106, 177, 177);*/
     background-color: white;
     font-size: 15px;
+    font-family: kanit;
 }
 
 header{
@@ -240,6 +243,57 @@ header a {
     margin-top: 10px;
 }
 
+.titlestudent{
+  text-align: center;
+  color: #CE031B;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  animation: back 2s infinite;
+  color: white;
+}
+
+.titlestudent h1{
+  border: 2px solid #a0091b;
+}
+
+.titlestudent:hover{
+  background: linear-gradient(to right, #a0091b,#CE031B,#a0091b);
+  color: white;
+}
+.titlestudents{
+  text-align: center;
+  color: #CE031B;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  animation: back 2s infinite;
+  color: white;
+}
+
+.titlestudents h1{
+  border: 2px solid #a0091b;
+}
+
+.titlestudents:hover{
+  background: #a0091b;
+  color: white;
+}
+
+@keyframes back{
+  0%{background: linear-gradient(to right,#ec062c,#CE031B,#CE031B,#e20821,#CE031B,#CE031B,#e40620,#CE031B,#CE031B,#CE031B,#CE031B);}
+  10%{background: linear-gradient(to right,#CE031B,#ec062c,#CE031B,#CE031B,#e20821,#CE031B,#CE031B,#e40620,#CE031B,#CE031B,#CE031B);}
+  20%{background: linear-gradient(to right,#CE031B,#CE031B,#ec062c,#CE031B,#CE031B,#e20821,#CE031B,#CE031B,#e40620,#CE031B,#CE031B);}
+  30%{background: linear-gradient(to right,#CE031B,#CE031B,#CE031B,#ec062c,#CE031B,#CE031B,#e20821,#CE031B,#CE031B,#e40620,#CE031B);}
+  40%{background: linear-gradient(to right,#CE031B,#CE031B,#CE031B,#CE031B,#ec062c,#CE031B,#CE031B,#e20821,#CE031B,#CE031B,#e40620);}
+  50%{background: linear-gradient(to right,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#ec062c,#CE031B,#CE031B,#e20821,#CE031B,#CE031B);}
+  60%{background: linear-gradient(to right,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#ec062c,#CE031B,#CE031B,#e20821,#CE031B);}
+  70%{background: linear-gradient(to right,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#ec062c,#CE031B,#CE031B,#e20821);}
+  80%{background: linear-gradient(to right,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#ec062c,#CE031B,#CE031B);}
+  90%{background: linear-gradient(to right,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#ec062c,#CE031B);}
+  100%{background: linear-gradient(to right,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#CE031B,#ec062c);}
+}
+
+
+
 .fourate{
     background-color: transparent;
     display: flex;
@@ -296,12 +350,94 @@ header a {
     border-radius: 10px;
 }
 
-.youtube{
-    width: 90%;
-    margin: 20px auto;
-    border: 2px solid black;
-    display: flex;
-    padding: 10px;
+.youtube {
+  width: 90%;
+  margin: 20px auto;
+  border: 2px solid black;
+  display: flex;
+  padding: 10px;
+  overflow-x: scroll; /* Enable horizontal scroll */
+}
+
+.youtubecontant {
+  flex: 0 0 auto; /* Make sure the content doesn't shrink */
+  margin-right: 10px; /* Add space between videos */
+  border: 3px solid white ;
+  box-shadow: 20px 5px 50px black ;
+  padding: 2px;
+  overflow-y: scroll; /* Enable vertical scroll if needed */
+  border-radius: 10px;
+}
+
+iframe{
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.details{
+  max-height: 120px;
+  /*text-align: center;*/
+}
+#sname{
+  color: #CE031B ;
+  font-weight: 600;
+}
+
+/* Custom scrollbar for WebKit browsers */
+.youtube::-webkit-scrollbar {
+  width: 12px;  /* Width of vertical scrollbar */
+  height: 14px; /* Height of horizontal scrollbar */
+}
+
+.youtube::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* Track background */
+  border-radius: 10px;  /* Rounded corners */
+}
+
+.youtube::-webkit-scrollbar-thumb {
+  background-color: #CE031B;  /* Scrollbar color */
+  border-radius: 10px;        /* Rounded scrollbar */
+  border: 3px solid #f1f1f1;  /* Space around the scrollbar */
+}
+
+.youtube::-webkit-scrollbar-thumb:hover {
+  background-color: #a0091b;  /* Color when hovered */
+}
+
+.youtube::-webkit-scrollbar-thumb:active {
+  background-color: #7a060d;  /* Color when clicked */
+}
+
+
+
+.youtubecontant::-webkit-scrollbar {
+  width: 12px;  /* Width of vertical scrollbar */
+  height: 12px; /* Height of horizontal scrollbar */
+}
+
+.youtubecontant::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* Track background */
+  border-radius: 10px;  /* Rounded corners */
+}
+
+.youtubecontant::-webkit-scrollbar-thumb {
+  background-color: #CE031B;  /* Scrollbar color */
+  border-radius: 10px;        /* Rounded scrollbar */
+  border: 3px solid #f1f1f1;  /* Space around the scrollbar */
+}
+
+.youtubecontant::-webkit-scrollbar-thumb:hover {
+  background-color: #a0091b;  /* Color when hovered */
+}
+
+.youtubecontant::-webkit-scrollbar-thumb:active {
+  background-color: #7a060d;  /* Color when clicked */
+}
+
+
+
+.youtubeslider{
+  display: flex;
 }
 
 .postgr{
@@ -334,3 +470,98 @@ header a {
       font-size: 18px;
     }
   }
+
+/* Form container that will slide in from the left */
+.form-container {
+  position: fixed;
+  color: #CE031B;
+  top: 280px;
+  left: -400px; /* Start hidden off the screen */
+  width: 300px;
+  height: 55%;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  box-shadow: 8px 5px 8px rgba(0, 0, 0, 0.5);
+  transition: left 0.4s ease; /* Smooth slide effect */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* When the form is visible */
+.form-container.active {
+  left: 0; /* Slide in the form */
+}
+
+/* Close button inside the form */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #CE031B;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.close-btn:hover {
+  background-color: #a0091b;
+}
+
+/* Left button that opens the form */
+#leftButton {
+  position: fixed;
+  width: 0px;
+  height: 0px;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 8px 5px 8px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  transition: left 0.4s ease; /* Smooth movement */
+}
+
+/* When the form is open, move the left button to the right with the form */
+#leftButton.move-right {
+  left: 330px; /* Move to the right with the form */
+}
+
+/* Button hover effect */
+#leftButton:hover {
+  background-color: transparent;
+}
+
+.form-container img {
+  position: relative;
+  left: 40px;
+}
+.form-container h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 65px;
+  color: #CE031B;
+}
+
+.submit{
+  position: absolute;
+  background-color: #CE031B;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 290px;
+}
+
+#message{
+  position: relative;
+  left: 60px;
+}
