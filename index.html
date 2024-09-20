@@ -96,8 +96,8 @@
                 </div>
                 </div>
                 <div class="slider">
-                    <!-- Slide images container -->
-                    <div class="slides" id="slides">
+                  <!-- Slide images container with new id -->
+                  <div class="slide-show" id="slide-container">
                       <img src="Admissionopen2025.jpg" alt="Image 1">
                       <img src="mousslider2023.jpg" alt="Image 2">
                       <img src="banneriic4star.jpg" alt="Image 3">
@@ -105,10 +105,11 @@
                       <img src="placementslidenew.jpg" alt="Image 5">
                       <img src="scholarshipbanner.jpg" alt="Image 6">
                       <img src="pathwayslide2022.jpg" alt="Image 7">
-                    </div>
-                    <button class="prev" onclick="prevSlide()">&#10094;</button>
-                    <button class="next" onclick="nextSlide()">&#10095;</button>
-                </div>
+                  </div>
+                  <!-- Updated button with new function names -->
+                  <button class="prev" onclick="goToPreviousSlide()">&#10094;</button>
+                  <button class="next" onclick="goToNextSlide()">&#10095;</button>
+              </div>
 
                 <div class="fourate">
                   <i class="fa-solid fa-graduation-cap"><br><h4>Admission</h4></i>
@@ -507,6 +508,31 @@
 <div class="titlestudents">
   <h1>Program Offered</h1>
 </div>
+<div class="program">
+  <div class="healthcare">
+    <button class="topButton" id="topButton" onclick="toggleDiv()"><b>After 12th - Health Care Professional Courses</b></button>
+    <div class="afterhealth">
+      <div class="healthaa">
+        <div class="aahealthare">
+
+        </div>
+      </div>
+      <div class="aftertwo">
+        <div class="aftertwotk">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="Afterth">
+      <button class="sectopButton" id="sectopButton" onclick="sectoggleDiv()">After 12th</button>
+    </div>
+    <div class="Afterg">
+      <h2>After Graduation</h2>
+    </div>
+  </div>
+
 </div>
 <div class="sides">
 <button class="leftButton" id="leftButton" onclick="openForm()"><img src="apply-scholar-min.png" alt="Scholarship"></button>
@@ -531,5 +557,46 @@
 </div>
 </div>
 </div>
+<script>
+  let currentSlideIndex = 0;
+const slideImages = document.querySelectorAll(".slide-show img");
+
+// Function to display the selected slide
+function displaySlide(index) {
+    // Loop back if the index exceeds the number of slides
+    if (index >= slideImages.length) {
+        currentSlideIndex = 0;
+    } else if (index < 0) {
+        currentSlideIndex = slideImages.length - 1;
+    } else {
+        currentSlideIndex = index;
+    }
+
+    // Adjust the `translateX` to slide the images
+    const translateOffset = -currentSlideIndex * 100 + '%';
+    document.getElementById("slide-container").style.transform = `translateX(${translateOffset})`;
+}
+
+// Function to go to the next slide
+function goToNextSlide() {
+    displaySlide(currentSlideIndex + 1);
+}
+
+// Function to go to the previous slide
+function goToPreviousSlide() {
+    displaySlide(currentSlideIndex - 1);
+}
+
+// Automatically transition slides every 3 seconds
+function startAutoSlide() {
+    setInterval(goToNextSlide, 3000);
+}
+
+// Initialize when the window loads
+window.onload = function() {
+    startAutoSlide(); // Start the auto slide feature
+    displaySlide(currentSlideIndex); // Display the first slide on load
+};
+</script>
 </body>
 </html>

@@ -1,47 +1,4 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slides img");
-const dots = document.querySelectorAll(".dot");
-let autoSlideInterval;
-
-// Function to show the current slide
-function showSlide(index) {
-  if (index >= slides.length) {
-    slideIndex = 0;
-  } else if (index < 0) {
-    slideIndex = slides.length - 1;
-  } else {
-    slideIndex = index;
-  }
-
-  const offset = -slideIndex * 100 + '%';
-  document.getElementById("slides").style.transform = `translateX(${offset})`;
-}
-
-// Next and Previous buttons
-function nextSlide() {
-  showSlide(slideIndex + 1);
-}
-
-function prevSlide() {
-  showSlide(slideIndex - 1);
-}
-
-
-
-// Auto slide
-function autoSlide() {
-  autoSlideInterval = setInterval(() => {
-    nextSlide();
-  }, 4000); // Change slide every 3 seconds
-}
-
-// Start auto slide on page load
-window.onload = function() {
-  autoSlide();
-  showSlide(slideIndex);
-};
-
-    // Function to set the viewport scale dynamically
+ // Function to set the viewport scale dynamically
 function setViewport() {
 var viewportMeta = document.querySelector("meta[name='viewport']");
 
@@ -77,6 +34,15 @@ function closeForm() {
     document.getElementById("leftButton").classList.remove("move-right");
 }
 
+function toggleDiv() {
+  const afterHealthDiv = document.querySelector('.afterhealth');
+  afterHealthDiv.classList.toggle('show');
+}
+function sectoggleDiv() {
+  const afterHealthDiv = document.querySelector('.Afterg');
+  afterHealthDiv.classList.toggle('show');
+}
+
 function emailSend(){
 
     var userName = document.getElementById('name').value;
@@ -100,3 +66,4 @@ function emailSend(){
     );
 
 }
+

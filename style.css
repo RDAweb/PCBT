@@ -172,15 +172,15 @@ header p{
   }
 
   /* Slider images */
-.slides {
-    width: 100%;
-    margin-top: 30px;
+  .slide-show {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
-.slides img {
+.slide-show img {
     width: 100%;
+    margin-top: 20px;
     border-radius: 10px;
 }
 
@@ -188,6 +188,8 @@ header p{
   .prev, .next {
     position: absolute;
     top: 50%;
+    width: 70px;
+    height: 70px;
     transform: translateY(-70%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -564,4 +566,99 @@ iframe{
 #message{
   position: relative;
   left: 60px;
+}
+
+.program{
+  text-align: center;
+  margin-top: 40px;
+  background-color: #f1f1f1;
+}
+
+.program button{
+  background-color: #f1f1f1;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #dad8d8;
+  border-radius: 5px;
+  box-shadow: 10px 5px 20px black;
+  height: 50px;
+}
+
+.program button:active{
+  background: linear-gradient(to right,#db3245,#d80820);
+}
+.program h2:active{
+  background: linear-gradient(to right,#db3245,#d80820);
+}
+
+@keyframes clickc {
+  0%{background: linear-gradient(to right,#db3245,#d80820,);}
+  10%{background: linear-gradient(to right,#db3245,#d80820,);}
+  20%{background: linear-gradient(to right,#db3245,#d80820,);}
+  30%{background: linear-gradient(to right,#db3245,#d80820,);}
+  40%{background: linear-gradient(to right,#db3245,#d80820,);}
+  50%{background: linear-gradient(to right,#db3245,#d80820,);}
+  60%{background: linear-gradient(to right,#db3245,#d80820,);}
+  70%{background: linear-gradient(to right,#db3245,#d80820,);}
+  80%{background: linear-gradient(to right,#db3245,#d80820,);}
+  90%{background: linear-gradient(to right,#db3245,#d80820,);}
+  100%{background: linear-gradient(to right,#db3245,#d80820,);}
+}
+
+.healthcare{
+  padding-top: 20px;
+}
+
+.afterhealth{
+  width: 450px;
+  height:320px;
+  margin: 20px auto;
+  display: block;
+}
+
+.healthaa{
+  background-color: #7a060d;
+  min-width: 80px;
+  min-height: 260px;
+  margin: 20px;
+  position: relative;
+  left: -260px;
+}
+.aftertwotk{
+  background-color: #7a060d;
+  min-width: 80px;
+  min-height: 260px;
+  margin: 20px;
+  position: relative;
+  left: 260px;
+  top: -280px;
+}
+
+
+.afterhealth.active{
+  left: 0; /* Slide in the form */
+}
+
+.afterhealth {
+  display: none; /* Initially hidden */
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(-20px); /* Initial position */
+}
+
+.afterhealth.show {
+  display: block; /* Show the div */
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to final position */
+}
+
+#topButton{
+  background-color: #f1f1f1;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #dad8d8;
+  border-radius: 5px;
+  box-shadow: 10px 5px 20px rgb(0, 0, 0);
+  font-size: 20px;
+  border: transparent;
 }
